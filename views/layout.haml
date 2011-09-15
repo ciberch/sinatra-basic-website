@@ -1,0 +1,19 @@
+%html{'xmlns:og'=>"http://ogp.me/ns#"}
+  %head
+    %title
+      = @title
+    %meta{:property => 'og:type', :content => 'profile'}
+    %meta{:property => 'og:image', :content => 'http://ciberch.cloudfoundry.com/images/me.jpg'}
+    %meta{:property => 'og:url', :content => 'http://ciberch.cloudfoundry.com'}
+    %meta{:property => 'og:description', :content => 'Who is ciberch ?'}
+    %link{:rel=>'stylesheet', :href=>'/stylesheets/style.css', :type => "text/css"}
+  %body
+    .container_12
+      .grid_12
+        .grid_3
+          %img.small{:src => '/images/me.jpg'}
+        .grid_8
+          %h1= @title
+          %h3="Is <a href='http://ciberch.cloudfoundry.com'>@ciberch</a>. Everywhere. Except Facebook"
+      .clear
+      =yield

@@ -1,0 +1,1 @@
+This is a simple shell app in Sinatra.
