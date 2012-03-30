@@ -7,6 +7,6 @@ gem "hashie"
 gem "emk-sinatra-url-for"
 
 group :development do
-  gem "vmc"
+  gem "vmc", ">= 0.3.16.beta.5"
 end
 
