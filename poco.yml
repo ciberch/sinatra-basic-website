@@ -1,0 +1,90 @@
+:display_name: "Monica Wilkinson"
+:preferred_username: "ciberch"
+:gender: "female"
+:relationship_status: "happily married"
+:about:  "Many people describe themselves by listing links to the services they use. I prefer to describe myself by showing you what I do and what I think."
+:sports:
+  -
+    :value: "Tennis"
+    :about: "USTA 4.0 player @ SFTC"
+  -
+    :value: "Table Tennis"
+    :about: "Only for fun"
+:interests:
+  -
+    :value: "Travel"
+    :description: "I would like to go to Nepal"
+  -
+    :value: "Web & API Development"
+    :description: "Ruby, NodeJS, HTML 5"
+  -
+    :value: "Activity Streams"
+    :description: "And other open standards: OAuth, PubSubHubbub, PoCo"
+:photos:
+  -
+    :type: "thumbnail"
+    :value: "/images/me.jpg"
+:emails:
+  -
+    :value: "mwilkinson@vmware.com"
+    :type: "work"
+:organizations:
+  -
+    :name: "activitystrea.ms"
+    :title: "Contributor"
+  -
+    :name: "Cloud Foundry"
+    :title: "Developer Advocate"
+:ims:
+  -
+    :type: "skype"
+    :value: "ciberch"
+:accounts:
+  -
+    :domain: "github.com"
+    :username: "ciberch"
+  -
+    :domain: "twitter.com"
+    :username: "ciberch"
+  -
+    :domain: "facebook.com"
+    :username: "mciberch"
+  -
+    :domain: "linkedin.com"
+    :username: "ciberch"
+:urls:
+  -
+    :name: Cloud Foundry Reusable Presos
+    :value: "http://studios.cloudfoundry.com"
+    :type: "work"
+  -
+    :name: Cloud Foundry Docs
+    :value: "http://start.cloudfoundry.com"
+    :type: "work"
+  -
+    :name: Cloud Foundry Main Website
+    :value: "http://www.cloudfoundry.com"
+    :type: "work"
+  -
+    :name: Activity Streams Node Boilerplate Template
+    :value: "http://asms.cloudfoundry.com"
+    :type: "work"
+  -
+    :name: Salesforce/LinkedIn Demo
+    :value: "http://salesforce-demo.cloudfoundry.com"
+    :type: "work"
+  -
+    :name: App Showcase -- In progress
+    :value: "http://collaboration.cloudfoundry.com"
+    :type: "work"
+
+:shit_i_say:
+  -
+    :i_say: Do What you Love
+    :why: You owe it to yourself.
+  -
+    :i_say: Just Do It
+    :why: Ship It. Don't be afraid to iterate in the open. Inspire others.
+  -
+    :i_say: Connect the dots
+    :why: Help build the programmable web. Expose Web Hooks. Build integrations. Map.Transform.

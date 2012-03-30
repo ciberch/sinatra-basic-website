@@ -1,47 +1,27 @@
 .grid_12
-  %p Many people describe themselves by listing links to the services they use.  I prefer to describe myself by showing you what I do and what I think.
+  %p=@me.about
 
 .clear
 
 .grid_4
-  %h3 Body
+  %h3 Likes
   %ul
-    %li
-      %strong Tennis
-      %span Co Captain of USTA 7.5 Combo Team
-    %li
-      %strong Travel
-      %span Just got back from Venice. What's next ?
-    %li
-      %strong Hangout in SOMA
-      %span With my husband, sister and friends, cat, etc ;)
-
+    -@me.interests.each do |like|
+      %li
+        %strong=like.value
+        %span=like.description
+.grid_4
+  %h3 Apps
+  %ul
+    - @me.urls.each do |app|
+      %li
+        %a{:href=> app.value}=app.name
 
 .grid_4
-  %h3 Mind
+  %h3 S**t I Say
   %ul
-    %li
-      %strong
-        %a{:href=> 'http://developers.socialcast.com'} developers.socialcast.com
-    %li
-      %a{:href => 'http://salesforce-demo.cloudfoundry.com'} salesforce-demo.cloudfoundry.com
-    %li
-      %strong
-        %a{:href => 'http://collaboration.cloudfoundry.com'} collaboration.cloudfoundry.com
-    %li
-      %strong
-        %a{:href => 'http://activitystrea.ms'} activitystrea.ms
-
-.grid_4
-  %h3 Spirit
-  %ul
-    %li
-      %strong Do What you Love
-      %span You owe it to yourself.
-    %li
-      %strong Just Do It
-      %span Ship It. Don't be afraid to iterate in the open. Inspire others.
-    %li
-      %strong Connect the dots
-      %span Help build the programmable web. Expose Web Hooks. Build integrations. Map.Transform.
+    -@me.shit_i_say.each do |sh|
+      %li
+        %strong=sh.i_say
+        %span=sh.why
 

@@ -365,7 +365,7 @@ ul {
 }
 
 li {
-    list-style-type: none;    
+    list-style-type: none;
 }
 
 strong {
@@ -374,4 +374,10 @@ strong {
 .small {
     width:100px;
     height:100px;
+}
+
+body {
+  min-width: 960px;
+  background: #fff url(/images/bg.png) no-repeat bottom right;
+  font-family: 'Helvetica Neue', "Helvetica Neue Light", Helvetica;
 }
