@@ -1,5 +1,6 @@
 :display_name: "Monica Wilkinson"
 :preferred_username: "ciberch"
+:tagline: "{'tagline' : 'Passionate, Dreamer, Problem Solver'}"
 :gender: "female"
 :relationship_status: "happily married"
 :about:  "Many people describe themselves by listing links to the services they use. I prefer to describe myself by showing you what I do and what I think."
@@ -13,13 +14,13 @@
 :interests:
   -
     :value: "Travel"
-    :description: "I would like to go to Nepal"
+    :description: "SFO -> AUS -> NYC -> CDG"
   -
     :value: "Web & API Development"
-    :description: "Ruby, NodeJS, HTML 5"
+    :description: "Ruby, Node.js, HTML 5"
   -
     :value: "Activity Streams"
-    :description: "And other open standards: OAuth, PubSubHubbub, PoCo"
+    :description: "And other open standards: OAuth2, PubSubHubbub, PoCo"
 :photos:
   -
     :type: "thumbnail"
@@ -56,29 +57,35 @@
   -
     :name: Cloud Foundry Reusable Presos
     :value: "http://studios.cloudfoundry.com"
+    :avatar: "/images/studios.png"
+    :description: Sinatra App which uses the showcase gem to convert markdown to HTML5 slides
     :type: "work"
   -
     :name: Cloud Foundry Docs
-    :value: "http://start.cloudfoundry.com"
+    :value: "http://docs.cloudfoundry.com"
+    :avatar: "/images/docs.png"
+    :description: Sinatra App built using nanoc gem which converts gfm(markdown) to docs
     :type: "work"
   -
     :name: Cloud Foundry Main Website
     :value: "http://www.cloudfoundry.com"
+    :description: Main website for Cloud Foundry Users
     :type: "work"
   -
     :name: Activity Streams Node Boilerplate Template
     :value: "http://asms.cloudfoundry.com"
     :type: "work"
+    :description: Activity Stream Client in Node.js which allows you to create and filter streams
   -
     :name: Salesforce/LinkedIn Demo
     :value: "http://salesforce-demo.cloudfoundry.com"
     :type: "work"
   -
-    :name: App Showcase -- In progress
-    :value: "http://collaboration.cloudfoundry.com"
+    :name: USDOL Summer Internships
+    :value: "http://friends.cloudfoundry.com"
     :type: "work"
 
-:shit_i_say:
+:stuff_i_say:
   -
     :i_say: Do What you Love
     :why: You owe it to yourself.
