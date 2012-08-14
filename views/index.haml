@@ -1,27 +1,36 @@
-.grid_12
-  %p=@me.about
+.row
+  .span12
+    %p=@me.about
 
-.clear
-
-.grid_4
-  %h3 Likes
-  %ul
+.row
+  .span3
+    %h3.title Likes
     -@me.interests.each do |like|
-      %li
-        %strong=like.value
-        %span=like.description
-.grid_4
-  %h3 Apps
-  %ul
+      .row
+        .span3
+          %p
+            %strong=like.value
+          %p
+            %span=like.description
+  .span6
+    %h3.title Apps
     - @me.urls.each do |app|
-      %li
-        %a{:href=> app.value}=app.name
+      .row
+        .span2
+          %a{:href=> app.value}
+            %img.app_avatar{:src=>app.avatar}
+        .span4
+          %p
+            %a{:href=> app.value}=app.name
+          %p=app.description
 
-.grid_4
-  %h3 S**t I Say
-  %ul
-    -@me.shit_i_say.each do |sh|
-      %li
-        %strong=sh.i_say
-        %span=sh.why
+  .span3
+    %h3.title Advice
+    -@me.stuff_i_say.each do |stuff|
+      .row
+        .span3
+          %p
+            %strong=stuff.i_say
+          %p
+            %span=stuff.why
 

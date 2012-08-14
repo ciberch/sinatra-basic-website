@@ -5,7 +5,7 @@ This template uses:
 
 - Basic Sinatra
 - haml
-- 960gs
+- Twitter Bootstrap
 - Portable Contacts
 - Open Graph Prootocol
 
