@@ -7,6 +7,8 @@ GEM
       tilt
     hashie (3.2.0)
     json (1.8.1)
+    puma (2.9.0)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -24,4 +26,5 @@ DEPENDENCIES
   haml
   hashie
   json
+  puma
   sinatra
