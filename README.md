@@ -7,7 +7,7 @@ This template uses:
 - haml
 - Twitter Bootstrap
 - Portable Contacts
-- Open Graph Prootocol
+- Open Graph Protocol
 
 ## To deploy on Cloud Foundry
 
@@ -17,12 +17,12 @@ First fork the project. Then run:
 git clone git@github.com:<your_name>/sinatra-cloudfoundry-basic-website.git mycf
 cd mycf
 bundle install;bundle package
-vmc push
+git push heroku master
 ```
 
 ## To add your Facebook App ID do:
 
 ``` bash
-vmc env-add <app_name> facebook_app_id=23823782
+heroku config:set facebook_app_id=23823782
 
 ```
