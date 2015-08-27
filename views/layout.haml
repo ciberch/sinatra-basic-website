@@ -12,13 +12,14 @@
     %link{:rel=>'stylesheet', :href=>'/stylesheets/style.css', :type => "text/css"}
   %body
     #fb-root
-    :javascript
-      var CPChat = CPChat || {url: "http://jeff-test.crushpath.us/spots/2756/chat"};
-      (function() {
-        var cp = document.createElement('script'); cp.type = 'text/javascript'; cp.async = true;
-        cp.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + "crushpath-stream-test.herokuapp.com" + '/javascripts/snippet/bundle.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cp, s);
-      })();
+    - if @chat_url &&  @chat_base_url
+      :javascript
+        var CPChat = CPChat || {spotURL: "#{@chat_url}", bundleURL: "#{@chat_base_url}" + '/javascripts/snippet/bundle.js', styleURL: "#{@chat_base_url}" + "/stylesheets/snippetchat.css"};
+        (function() {
+          var cp = document.createElement('script'); cp.type = 'text/javascript'; cp.async = true;
+          cp.src = "//"+CPChat.bundleURL;
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cp, s);
+        })();
     :javascript
       (function(d, s, id) {
        var js, fjs = d.getElementsByTagName(s)[0];
