@@ -10,27 +10,20 @@
     %meta{:prefix=>"fb:http://ogp.me/ns/fb#", :property => "fb:app_id", :content=> @appid}
     %link{:rel=>'stylesheet', :href=>'/stylesheets/bootstrap.min.css', :type => "text/css"}
     %link{:rel=>'stylesheet', :href=>'/stylesheets/style.css', :type => "text/css"}
+    %style
+      a.cp-chat-button { display: 'none'}
   %body
-    #fb-root
-    :javascript
-      (function(d, s, id) {
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) return;
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=#{@appid}";
-       fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
+    - if @do_fb
+      #fb-root
+      :javascript
+        (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=#{@appid}";
+         fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
     .content.container
-      %a{:href=>"https://github.com/ciberch/sinatra-cloudfoundry-basic-website"}
-        %img{:style=>"position: absolute; top: 0; right: 0; border: 0;",  :src=>"https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67", :alt=>"Fork you on GitHub"}
-      .row
-        .hero-unit.blue.first-hero
-          .row
-            .span1
-              %img.small.avatar{:src => @image}
-            .span7
-              %h2="#{@title} - @#{@me.preferred_username}"
-              %p=@me.tagline
-      .clear
       =yield
-      .fb-like{"data-href" =>@full_url, "data-send" => "true", "data-show-faces" => "true", "data-width" => "450"}
+      - if @do_fb
+        .fb-like{"data-href" =>@full_url, "data-send" => "true", "data-show-faces" => "true", "data-width" => "450"}
