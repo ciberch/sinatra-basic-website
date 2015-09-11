@@ -13,15 +13,17 @@
     %style
       a.cp-chat-button { display: 'none'}
   %body
-    #fb-root
-    :javascript
-      (function(d, s, id) {
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) return;
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=#{@appid}";
-       fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
+    - if @do_fb
+      #fb-root
+      :javascript
+        (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=#{@appid}";
+         fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
     .content.container
       =yield
-      .fb-like{"data-href" =>@full_url, "data-send" => "true", "data-show-faces" => "true", "data-width" => "450"}
+      - if @do_fb
+        .fb-like{"data-href" =>@full_url, "data-send" => "true", "data-show-faces" => "true", "data-width" => "450"}
