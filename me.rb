@@ -16,5 +16,9 @@ class CiberchApp < Sinatra::Base
     @appid = ENV['facebook_app_id']
     haml :index
   end
+
+  get "/chat" do
+    haml :chat
+  end
 end
 
