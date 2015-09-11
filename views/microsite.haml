@@ -1,0 +1,48 @@
+
+- if @chat_url &&  @chat_base_url
+  :javascript
+      var customCSS = "localhost:9292/stylesheets/alt_snippetchat.css";
+      var CPChat = CPChat || {spotURL: "#{@chat_url}", bundleURL: "#{@chat_base_url}" + '/javascripts/snippet/bundle.js', styleURL: customCSS};
+      (function() {
+        var cp = document.createElement('script'); cp.type = 'text/javascript'; cp.async = true;
+        cp.src = "//"+CPChat.bundleURL;
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cp, s);
+      })();
+
+      function openChat(){
+        document.getElementsByClassName("cp-chat-button")[0].click();
+      }
+
+
+.row
+  .span6
+    %h1 Microsite ChatTest
+
+%br/
+%br/
+.row
+  .span6 Element partitioned digital proxy record network boolean, software transistorized supporting recognition controller.
+  %br/
+%br/
+.row
+  .span6 Proxy logarithmic in backbone controller gigabyte. Log floating-point reflective deviation bus sampling overflow solution deviation led video transponder backbone normalizing. Generator development for for bus cable, bypass, reducer feedback phase. Metafile supporting video application procedural development data, reducer prompt, processor infrared, normalizing harmonic metafile. Feedback phase network, disk logistically element bus bypass distributed scan. Log feedback integer metafile pulse recursive transponder distributed converter audio, sequential.
+  %br/
+  %br/
+.row
+  .span6 Computer pulse partitioned, dithering deviation, silicon. Generator bypass coordinated adaptive bridgeware or, sequential connectivity mainframe logarithmic, remote inversion inversion bypass developer. Reflective adaptive sequential, n-tier port partitioned in port scalar phase procedural software, controller partitioned. Connectivity port log, remote proxy, cascading converter analog, video transponder coordinated. Technician processor includes patch inversion computer solution analog read-only boolean metafile servicing, indeterminate integral. Silicon scan scalar processor solution plasma bypass procedural application silicon prototype recursive element cable for.
+  %br/
+  %br/
+
+.row
+  .span6 Procedural hyperlinked patch disk, fragmentation, transponder pulse femtosecond computer scan, transponder. Infrared reflective arrray boolean broadband servicing high resistor. Computer messaging audio remote cascading application, recursive prototype coordinated debugged silicon patch proxy deviation interface. Element device remote scan frequency kilohertz. Adaptive includes broadband computer frequency system developer proxy application system ethernet pc hyperlinked transponder. Log bridgeware pulse sequential converter proxy. Plasma, transistorized echo solution, read-only digital logistically read-only logarithmic bridgeware silicon network element patch boolean. Mainframe port feedback partitioned inversion element plasma broadband led.
+  %br/
+  %br/
+
+  %br/
+
+.row
+  .span2
+    %h3
+      %a{:href=> "javascript: openChat()", :id => "custom_chat_button"} Open Chat
+    %br/
+    %br/
