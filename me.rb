@@ -6,7 +6,7 @@ class CiberchApp < Sinatra::Base
 
   before do
     @chat_url = ENV['CHAT_URL'] || "http://jeff-test.crushpath.us/spots/2756/chat"
-    @chat_base_url = ENV['CHAT_BASE_URL'] || "crushpath-stream-test.herokuapp.com"
+    @chat_base_url = ENV['CHAT_BASE_URL'] || "localhost:5001"
     @appid = ENV['facebook_app_id']
     @host = ENV['HOST'] || 'localhost:9292'
   end
