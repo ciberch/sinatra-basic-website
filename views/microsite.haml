@@ -1,7 +1,7 @@
 
 - if @chat_url &&  @chat_base_url
   :javascript
-      var customCSS = "localhost:9292/stylesheets/alt_snippetchat.css";
+      var customCSS = "#{@host}/stylesheets/alt_snippetchat.css";
       var CPChat = CPChat || {spotURL: "#{@chat_url}", bundleURL: "#{@chat_base_url}" + '/javascripts/snippet/bundle.js', styleURL: customCSS};
       (function() {
         var cp = document.createElement('script'); cp.type = 'text/javascript'; cp.async = true;

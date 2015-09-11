@@ -7,6 +7,8 @@ class CiberchApp < Sinatra::Base
   before do
     @chat_url = ENV['CHAT_URL'] || "http://jeff-test.crushpath.us/spots/2756/chat"
     @chat_base_url = ENV['CHAT_BASE_URL'] || "crushpath-stream-test.herokuapp.com"
+    @appid = ENV['facebook_app_id']
+    @host = ENV['HOST'] || 'localhost:9292'
   end
 
   get "/" do
@@ -17,7 +19,7 @@ class CiberchApp < Sinatra::Base
     @description = "Who is #{@me.preferred_username || @me.display_name} ?"
     @image = url_for(@me.photos.first.value, :full)
     @title = @me.display_name
-    @appid = ENV['facebook_app_id']
+
     haml :index
   end
 
